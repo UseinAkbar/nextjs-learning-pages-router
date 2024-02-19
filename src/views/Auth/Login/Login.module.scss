@@ -1,0 +1,40 @@
+@import '@/styles/sass/colour.scss';
+
+.login {
+    display: grid;
+    grid-template-columns: max-content;
+    grid-auto-rows: min-content;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 15px;
+    height: 100vh;
+    background-color: map-get($schema, primary);
+
+    &__title {
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__form_group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &__form_label {
+        font-weight: 500;
+    }
+
+    &__form_input {
+        outline: none;
+        padding: 3px 6px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+}
