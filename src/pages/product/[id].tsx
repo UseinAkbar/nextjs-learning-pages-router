@@ -28,7 +28,7 @@ export async function getServerSideProps(context: any) {
     const id = context.params.id
     
     // fetch data
-    const data = await fetch(`http://localhost:3000/api/product/${id}`)
+    const data = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/product/${id}`)
     .then(res => res.json())
     .then(response => response.data)
     

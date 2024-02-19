@@ -19,7 +19,7 @@ export default ProductPage
 // semua yang di dalam getServerSideProps() dieksekusi di server, bukan di client/browser
 export async function getServerSideProps() {
     // fetch data
-    const data = await fetch("http://localhost:3000/api/product")
+    const data = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/product`)
     .then(res => res.json())
     .then(response => response.data)
 
